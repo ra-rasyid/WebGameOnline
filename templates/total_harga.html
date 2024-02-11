@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% block head %}
+<title>Total Harga</title>
+
+<div class="main-banner">
+  <div class="container">
+    <div class="row">
+      <div class="align-self-center col-12 text-center">
+          <div class="container mt-5">
+              <div class="row justify-content-center">
+                  <div class="col-lg-4">
+                      <div class="card">
+                          <div class="card-header">
+                              <h2 class="text-center">Pembayaran </h2>
+                          </div>
+                      
+                          <div class="card-body">
+                            <p class="text-center" style="font-size: large; font-weight: 500;">Total Harga: {{ total_harga }}</p>
+                            
+                              <p class="text-center" style="font-size: large; font-weight: 700; font-weight: bold;">Berhasil dibayarkan</p>
+                            
+                            
+                              <form method="post" action="{{ url_for('selesai') }}">
+                                  <button type="submit" class="btn btn-primary btn-block mt-3">Selesai</button>
+                              </form>
+
+                          </div>
+                          
+                      </div>
+                     
+                  </div>
+              </div>
+          </div>
+
+{% endblock %}

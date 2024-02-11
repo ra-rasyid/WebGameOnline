@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+{% block head %}
+    <title>halaman login</title>
+    <style>
+        body {
+          margin: 0;
+          padding: 0;
+          background: url('static/assets/images/login2.jpg') no-repeat center center fixed;
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover;
+          position: relative;
+          z-index: 1;
+        }
+    
+        .main-banner {
+          position: relative;
+          z-index: 2;
+        }
+    
+        .header-area {
+          background-color: transparent;
+        }
+      </style>
+{% endblock %}
+{% block body %}
+
+<div class="container  d-flex justify-content-center align-items-center" style="min-height: 100vh; background: none;">
+    <div class="col-lg-4">
+        <div style="background: none; color: aliceblue;" class="card">
+            <div class="card-header">
+                <h2 style="color: aliceblue;" class="text-center">Halaman Login</h2>
+            </div>
+
+            <div class="card-body">
+                <form method="POST">
+                    <div >
+
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Email address</label>
+                        <input name="inpEmail" type="email" class="form-control">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Password</label>
+                        <input name="inpPass" type="password" class="form-control">
+                    </div>
+
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary mt-4" style="border-radius: 50px; padding: 16px; font-size: 14px; background-color: #320083;border-color: aliceblue;">Login</button>
+                    </div>
+
+                </form>
+                <div class="mt-3 text-center">
+                    <a href="register" class="btn btn-secondary" style="background-color: #f0768b; border-color: aliceblue;">Register</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,286 @@
+{% extends "layout.html" %}
+{% block head %}
+<!-- ***** Preloader Start ***** -->
+<div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a href="index.html" class="logo">
+                        <img src="static/assets/images/gemm.png" alt="" style="width: 158px;">
+                    </a>
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
+                      <li><a href="index.html" class="active">Home</a></li>
+                      <li><a href="keranjang">Keranjang</a></li>
+                      <li><a href="about">About Us</a></li>
+                      <li><a href="logout">Log out</a></li>
+                  </ul>   
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+  <div class="main-banner">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 align-self-center">
+          <div class="caption header-text">
+            <h6>Welcome to GAMEsin</h6>
+            <h2>PILIH GAME FAVORITMU!</h2>
+            <p>"Kuliah bisa mengulang tahun depan, hype game baru harus dimainkan sekarang!<br>kembangkankan imajinasimu dan mainkan gamemu!"</p>
+            <div class="search-input">
+              <form id="search" action="#">
+                <input type="text" placeholder="Type Something" id='searchText' name="searchKeyword" onkeypress="handle" />
+                <button role="button">Search Now</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 offset-lg-2">
+          <div class="right-image">
+            <img src="static/assets/images/ea.jpg" alt="">
+            <span class="price">Rp800000</span>
+            <span class="offer">-40%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="features">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-6">
+          <a href="#">
+            <div class="item">
+              <div class="image">
+                <img src="static/assets/images/featured-01.png" alt="" style="max-width: 44px;">
+              </div>
+              <h4>Free Storage</h4>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <a href="#">
+            <div class="item">
+              <div class="image">
+                <img src="static/assets/images/featured-02.png" alt="" style="max-width: 44px;">
+              </div>
+              <h4>User More</h4>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <a href="#">
+            <div class="item">
+              <div class="image">
+                <img src="static/assets/images/featured-03.png" alt="" style="max-width: 44px;">
+              </div>
+              <h4>Reply Ready</h4>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <a href="#">
+            <div class="item">
+              <div class="image">
+                <img src="static/assets/images/featured-04.png" alt="" style="max-width: 44px;">
+              </div>
+              <h4>Easy Layout</h4>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section trending">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="section-heading">
+            <h6>Trending</h6>
+            <h2>Trending Games</h2>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="main-button">
+            <a href="shop.html">View All</a>
+          </div>
+        </div>
+
+      
+        <div class="col-lg-3 col-md-6">
+          <div class="item">
+            <div class="thumb">
+              <a href="product-details.html"><img src="static/assets/images/gtv.jpg" alt=""></a>
+              <span class="price"><em>Rp500000</em>Rp300000</span>
+            </div>
+             <!-- Button add to chart-->
+            <div class="down-content">
+              <span class="category">Adventure</span>
+              <h4>GTA 5</h4>
+              <!-- Use button tag and add a data attribute for the product ID -->
+              <button class="add-to-cart" onclick="location.href='{{ url_for('add_default_to_cart') }}'" style="border-radius: 2%;"><i class="fa fa-shopping-bag"></i> Add to Cart</button>
+            </div>
+            <!-- ----------------------- -->
+          </div>
+        </div>
+        
+
+
+        <div class="col-lg-3 col-md-6">
+          <div class="item">
+            <div class="thumb">
+              <a href="product-details.html"><img src="static/assets/images/ronaldo.jpg" alt=""></a>
+              <span class="price">Rp745000</span>
+            </div>
+             <!-- Button add to chart-->
+            <div class="down-content">
+              <span class="category">Sport</span>
+              <h4>Fifa 24 </h4>
+              <!-- Use button tag and add a data attribute for the product ID -->
+              <button class="add-to-cart" onclick="location.href='{{ url_for('add_default_to_cart2') }}'" style="border-radius: 2%;"><i class="fa fa-shopping-bag""></i> Add to Cart</button>
+              
+            </div>
+             <!-- ----------------->
+          </div>
+        </div>
+
+
+
+        <div class="col-lg-3 col-md-6">
+          <div class="item">
+            <div class="thumb">
+              <a href="product-details.html"><img src="static/assets/images/dota.jpg" alt=""></a>
+              <span class="price"><em>Rp200000</em>Rp150000</span>
+            </div>
+             <!-- Button add to chart-->
+            <div class="down-content">
+              <span class="category">War/Action</span>
+              <h4>DOTA</h4>
+              <!-- Use button tag and add a data attribute for the product ID -->
+              <button class="add-to-cart" onclick="location.href='{{ url_for('add_default_to_cart3') }}'" style="border-radius: 2%;"><i class="fa fa-shopping-bag""></i> Add to Cart</button>
+            </div>
+             <!-- ----------------------->
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="item">
+            <div class="thumb">
+              <a href="product-details.html"><img src="static/assets/images/pes.jpg" alt=""></a>
+              <span class="price">Rp300000</span>
+            </div>
+             <!-- Button add to chart-->
+            <div class="down-content">
+              <span class="category">Sport</span>
+              <h4>PES  2024 </h4>
+              <!-- Use button tag and add a data attribute for the product ID -->
+              <button class="add-to-cart" onclick="location.href='{{ url_for('add_default_to_cart4') }}'" style="border-radius: 2%;"><i class="fa fa-shopping-bag""></i> Add to Cart</button>
+            </div>
+             <!-- --------------->
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="item">
+            <div class="thumb">
+              <a href="product-details.html"><img src="static/assets/images/aspal.jpg" alt=""></a>
+              <span class="price"><em>Rp300000</em>Rp157000</span>
+            </div>
+             <!-- Button add to chart-->
+            <div class="down-content">
+              <span class="category">Sport</span>
+              <h4>ASPHALT</h4>
+              <!-- Use button tag and add a data attribute for the product ID -->
+              <button class="add-to-cart" onclick="location.href='{{ url_for('add_default_to_cart5') }}'" style="border-radius: 2%;"><i class="fa fa-shopping-bag""></i> Add to Cart</button>
+            </div>
+             <!-- ----------------------->
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="item">
+            <div class="thumb">
+              <a href="product-details.html"><img src="static/assets/images/fornite (1).jpg" alt=""></a>
+              <span class="price"><em>Rp240000</em>Rp150000</span>
+            </div>
+             <!-- Button add to chart-->
+            <div class="down-content">
+              <span class="category">War/Action</span>
+              <h4>FORNITE</h4>
+              <!-- Use button tag and add a data attribute for the product ID -->
+              <button class="add-to-cart" onclick="location.href='{{ url_for('add_default_to_cart6') }}'" style="border-radius: 2%;"><i class="fa fa-shopping-bag""></i> Add to Cart</button>
+            </div>
+             <!-- ----------------------->
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="item">
+            <div class="thumb">
+              <a href="product-details.html"><img src="static/assets/images/batman.jpg" alt=""></a>
+              <span class="price"><em>Rp99000</em>Rp20000</span>
+            </div>
+             <!-- Button add to chart-->
+            <div class="down-content">
+              <span class="category">War/Action</span>
+              <h4>BATMAN 2 </h4>
+              <!-- Use button tag and add a data attribute for the product ID -->
+              <button class="add-to-cart" onclick="location.href='{{ url_for('add_default_to_cart7') }}'" style="border-radius: 2%;"><i class="fa fa-shopping-bag""></i> Add to Cart</button>
+            </div>
+             <!-- ----------------------->
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="item">
+            <div class="thumb">
+              <a href="product-details.html"><img src="static/assets/images/metal.jpg" alt=""></a>
+              <span class="price"><em>Rp130000</em>Rp80000</span>
+            </div>
+             <!-- Button add to chart-->
+            <div class="down-content">
+              <span class="category">War/Action</span>
+              <h4>METAL SLUG </h4>
+              <!-- Use button tag and add a data attribute for the product ID -->
+              <button class="add-to-cart" onclick="location.href='{{ url_for('add_default_to_cart8') }}'" style="border-radius: 2%;"><i class="fa fa-shopping-bag""></i> Add to Cart</button>
+            </div>
+             <!-- ----------------------->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="col-lg-12">
+        <p>Copyright © 2024 GAMEsin Company. All rights reserved. &nbsp;&nbsp; <a rel="nofollow" target="_blank"></a></p>
+      </div>
+    </div>
+  </footer>
+{% endblock %}

@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+{% block head %}
+<title>Register</title>
+<style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('static/assets/images/login2.jpg') no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      position: relative;
+      z-index: 1;
+    }
+
+    .main-banner {
+      position: relative;
+      z-index: 2;
+    }
+
+    .header-area {
+      background-color: transparent;
+    }
+  </style>
+{% endblock %}
+{% block body %}
+
+<!-- <div class="mt-5"></div>
+<div class="row justify-content-center">
+
+    <div class="col-4">
+        <div class="card" style="min-height: 100vh; background: none;">
+            <div class="card-header">
+                <h2 class="text-center" style="color: aliceblue;">Register</h2>
+            </div> -->
+<div class="container  d-flex justify-content-center align-items-center" style="min-height: 100vh; background: none;">
+    <div class="col-lg-4">
+        <div style="background: none; color: aliceblue;" class="card">
+            <div class="card-header">
+                <h2 style="color: aliceblue;" class="text-center">Register</h2>
+            </div>
+            <div class="card-body">
+                <form method="POST">           <!--buat menggunakan fungsi python-->
+
+                    <div class="mb-3">
+                        <label class="form-label" style="color: aliceblue;">Username</label>
+                        <input name="inpUsername" type="text" class="form-control">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label" style="color: aliceblue;">Email adress</label>
+                        <input name="inpEmail" type="email" class="form-control">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label" style="color: aliceblue;">Password</label>
+                        <input name="inpPass" type="password" class="form-control">
+                    </div>
+
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary mt-4" style="background-color: #320083; border-color: aliceblue;">Register</button>
+                    </div>
+                
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}
